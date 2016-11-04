@@ -9,11 +9,12 @@ def num_words(s):
 def sum_list(lst):
     return sum(lst)
 
-print sum_list([])
 # PROB 3
 # Return True if x is in lst, otherwise return False.
 def appears_in_list(x, lst):
-    return False
+    return x in lst
+
+print appears_in_list(8, [1,2,4,6])
 
 # PROB 4
 # Return the number of unique strings in lst.
