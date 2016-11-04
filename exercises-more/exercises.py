@@ -14,8 +14,6 @@ def sum_list(lst):
 def appears_in_list(x, lst):
     return x in lst
 
-print appears_in_list(8, [1,2,4,6])
-
 # PROB 4
 # Return the number of unique strings in lst.
 # e.g. num_unique(["a", "b", "a", "c", "a"]) == 3
