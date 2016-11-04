@@ -91,9 +91,13 @@ def find_mismatch(lst1, lst2):
         if lst1[i] != lst2[i]:
             mismatches.append(i)
     return mismatches
-print find_mismatch(["a", "b", "c", "d", "e"], ["f", "b", "c", "g", "e"])
+
 # PROB 12
 # Returns the list of words that are in word_list but not in vocab_list.
 def spell_checker(vocab_list, word_list):
-    return []
+    words = []
+    for item in word_list:
+        if (item in vocab_list) == False:
+            words.append(item)
+    return words
 
