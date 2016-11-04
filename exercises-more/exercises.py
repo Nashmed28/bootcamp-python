@@ -68,15 +68,17 @@ def word_frequency(lst):
         word_freq[element] = lst.count(element)
     return word_freq
 
-
-
-
 # PROB 10
 # Return the tuple (word, count) for the word that appears the most frequently
 # in the list, and the number of times the word appears. If the list is empty, return None.
 # e.g. most_frequent_word(["a", "a", "aaa", "b", "b", "b"]) == ("b", 3)
 def most_frequent_word(lst):
-    return None
+    word = None
+    unique = set(lst)
+    for element in unique:
+        if word == None or lst.count(element) > lst.count(word[0]):   
+            word = (element, lst.count(element))
+    return word
 
 # PROB 11
 # Compares the two lists and finds all the positions that are mismatched in the list.
