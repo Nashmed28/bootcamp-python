@@ -18,19 +18,22 @@ def appears_in_list(x, lst):
 # Return the number of unique strings in lst.
 # e.g. num_unique(["a", "b", "a", "c", "a"]) == 3
 def num_unique(lst):
-    return 0
+    unique = set(lst)
+    return len(unique)
 
 # PROB 5
 # Return a new list, where the contents of the new list are lst in reverse order.
 # e.g. reverse_list([3, 2, 1]) == [1, 2, 3]
 def reverse_list(lst):
-    return []
+    # http://stackoverflow.com/questions/3940128/how-can-i-reverse-a-list-in-python
+    return lst[::-1]
 
 # PROB 6
 # Return a new list containing the elements of lst in sorted decreasing order.
 # e.g. sort_reverse([5, 7, 6, 8]) == [8, 7, 6, 5]
 def sort_reverse(lst):
-    return []
+    # http://stackoverflow.com/questions/11750469/python-list-sort-doesnt-seem-to-work
+    return reverse_list( sorted(lst, key=int) )
 
 # PROB 7
 # Return a new string containing the same contents of s, but with all the
