@@ -7,8 +7,9 @@ def num_words(s):
 # PROB 2
 # Return the sum of all the numbers in lst. If lst is empty, return 0.
 def sum_list(lst):
-    return 0
+    return sum(lst)
 
+print sum_list([])
 # PROB 3
 # Return True if x is in lst, otherwise return False.
 def appears_in_list(x, lst):
