@@ -61,7 +61,15 @@ def longest_word(lst):
 # appears in lst.
 # e.g. word_frequency(["a", "a", "aaa", "b", "b", "b"]) == {"a": 2, "aaa": 1, "b": 3}
 def word_frequency(lst):
-    return {}
+    # http://stackoverflow.com/questions/2161752/how-to-count-the-frequency-of-the-elements-in-a-list
+    word_freq = {}
+    unique = set(lst)
+    for element in unique:
+        word_freq[element] = lst.count(element)
+    return word_freq
+
+
+
 
 # PROB 10
 # Return the tuple (word, count) for the word that appears the most frequently
