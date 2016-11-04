@@ -40,13 +40,21 @@ def sort_reverse(lst):
 # vowels (upper and lower case) removed. Vowels do not include 'y'
 # e.g. remove_vowels("abcdeABCDE") == "bcdBCD"
 def remove_vowels(s):
+    # http://stackoverflow.com/questions/3939361/remove-specific-characters-from-a-string-in-python
+    vowels = "aeouiAEOUI"
+    for char in vowels:
+        s = s.replace(char, "")
     return s
 
 # PROB 8
 # Return the longest word in the lst. If the lst is empty, return None.
 # e.g. longest_word(["a", "aaaaaa", "aaa", "aaaa"]) == "aaaaaa"
 def longest_word(lst):
-    return None
+    word = None
+    for item in lst:
+        if word == None or len(item) > len(word):
+            word = item 
+    return word
 
 # PROB 9
 # Return a dictionary, mapping each word to the number of times the word
